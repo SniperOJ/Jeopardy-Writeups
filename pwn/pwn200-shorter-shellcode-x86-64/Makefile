@@ -1,4 +1,4 @@
-short-shellcode:short-shellcode.c
-	gcc -no-pie -z execstack -fno-stack-protector -o short-shellcode short-shellcode.c
+shellcode:shellcode.c
+	gcc -no-pie -z execstack -fno-stack-protector -o shellcode shellcode.c
 clean:
-	rm ./short-shellcode
+	rm ./shellcode
