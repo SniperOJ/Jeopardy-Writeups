@@ -9,8 +9,8 @@
 
 			/* Connect */
 			$db_host = 'localhost';
-			$db_name = 'SniperOJ';
-			$db_user = 'root';
+			$db_name = '';
+			$db_user = '';
 			$db_pwd = '';
 			$mysqli = new mysqli($db_host, $db_user, $db_pwd, $db_name);
 			if(mysqli_connect_error()){
