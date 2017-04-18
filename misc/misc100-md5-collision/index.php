@@ -3,7 +3,7 @@
 	if(isset($_POST['password']) && isset($_POST['username'])){
 		$username = $_POST['password'];
 		$password = $_POST['username'];
-		if ((md5($username) === md5($username)) && ($username != $password)){
+		if ((md5($username) === md5($password)) && ($username != $password)){
 			echo $flag;
 		}else{
 			echo('<script>alert("Wrong!")</script>');
@@ -111,7 +111,7 @@
 
 <!--
 	Hint : 
-		if((md5($username) === md5($username)) && ($username != $password)){
+		if((md5($username) === md5($password)) && ($username != $password)){
 			echo $flag;
 		}
 -->
