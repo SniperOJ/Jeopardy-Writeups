@@ -4,36 +4,42 @@
 		/* Get data */
 		$username = $_POST['username'];
 		$password = $_POST['password'];
-		/* Connect */
-		$db_host = '';
-		$db_name = '';
-		$db_user = '';
-		$db_pwd = '';
-		$mysqli = new mysqli($db_host, $db_user, $db_pwd, $db_name);
-		if(mysqli_connect_error()){
-		    echo 'Database conntection error!';
-		}
-		$mysqli->set_charset("utf8");
-		/* Query */
-		$password = md5($password, true);
-		$sql = "select * from users where username='$username' and password='$password'";
-		$result = $mysqli->query($sql);
+		/* Check the admin */
+		if ($username === "admin"){
 
-		// if($result === false){//执行失败
-		//     echo $mysqli->error;
-		//     echo $mysqli->errno;
-		// }
+			/* Connect */
+			$db_host = 'localhost';
+			$db_name = 'SniperOJ';
+			$db_user = 'root';
+			$db_pwd = '';
+			$mysqli = new mysqli($db_host, $db_user, $db_pwd, $db_name);
+			if(mysqli_connect_error()){
+			    echo 'Database conntection error!';
+			}
+			$mysqli->set_charset("utf8");
+			/* Query */
+			$password = md5($password, true);
+			$sql = "select * from users where username='$username' and password='$password'";
+			$result = $mysqli->query($sql);
 
-		if (($result->num_rows) > 0){
-			echo "Login success!";
-			setcookie("flag","SniperOJ{md5_V5_injection}");
-			header("flag: SniperOJ{md5_V5_injection}");
+			// if($result === false){//执行失败
+			//     echo $mysqli->error;
+			//     echo $mysqli->errno;
+			// }
+
+			if (($result->num_rows) > 0){
+				echo "Login success!";
+				setcookie("flag","SniperOJ{md5_V5_injection}");
+				header("flag: SniperOJ{md5_V5_injection}");
+			}else{
+				echo "Login failed!";
+			}
+
+			/* Close*/
+			$mysqli->close();
 		}else{
-			echo "Login failed!";
+			echo '<script>alert("Only admin is able to login!");</script>';
 		}
-
-		/* Close*/
-		$mysqli->close();
 	}else{
 		echo '<script>alert("请填写用户名和密码");</script>';
 	}
@@ -54,4 +60,3 @@
 </form>
 </body>
 </html>
-
