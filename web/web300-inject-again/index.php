@@ -44,9 +44,9 @@ if($res->num_rows>0){
     PRIMARY KEY (`id`)
     ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
  */
-
+// md5('sniperoj') == '498c67b7c86b01bd68ab5cbafd245b1c'
 /*
-   INSERT INTO `users` (username, password) values ('admin','SniperOJ{BinD_injEct1oN}');
+   INSERT INTO `users` (username, password) values ('admin','SniperOJ{498c67b7c86b01bd68ab5cbafd245b1c}');
 
  */
 ?>
