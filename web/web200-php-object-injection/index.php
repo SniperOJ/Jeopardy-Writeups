@@ -12,7 +12,7 @@
       
             // write initial message
             $fd=fopen($this->logFile,"a+");
-            fwrite($fd,$initMsg);
+            fwrite($fd,$this->initMsg);
             fclose($fd);
         }                       
       

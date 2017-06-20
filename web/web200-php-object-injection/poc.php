@@ -12,7 +12,7 @@
       
             // write initial message
             $fd=fopen($this->logFile,"a+");
-            fwrite($fd,$initMsg);
+            fwrite($fd,$this->initMsg);
             fclose($fd);
         }                       
       
@@ -30,4 +30,5 @@
         }                       
     }
 
-    var_dump(base64_encode(serialize(new Logger("SniperOJ"))));
+    $fake = new Logger('SniperOJ');
+    echo base64_encode(serialize($fake));
