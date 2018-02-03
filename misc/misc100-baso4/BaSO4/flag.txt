@@ -1,0 +1,1 @@
+HITCTF{Dont_dive_into_misc}
