@@ -1,8 +1,8 @@
 # Writeups & Source Code of Challenges On SniperOJ
 
 #### Description
-* Platform Source Code: https://github.com/SniperOJ/SniperOJ-Platform
-* Dockerfiles of Challenges: https://github.com/SniperOJ/CTF-Challenge-Dockerfiles
+* Platform Source Code: https://github.com/SniperOJ/Platform
+* Dockerfiles of Challenges: https://github.com/SniperOJ/Dockerfiles
 
 
 #### Challenges
