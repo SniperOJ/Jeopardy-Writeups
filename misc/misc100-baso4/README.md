@@ -11,7 +11,7 @@ BaSO4 联想到 Base64, 23333
 2. base64, base32, base16 这三种编码方式生成输出的字符集越来越少, 因此当编码样本足够大的时候
 假设使用了 base64 进行编码, 密文中包含了 base16/base32 中本身不存在的字符, 使用 base32/base32 进行解码是会报错的
 因此利用高级语言的 try/catch 这个特点即可解决这个问题, 下面给出 Python 语言的解码脚本
-```
+```python
 #!/usr/bin/env python
 
 import base64
