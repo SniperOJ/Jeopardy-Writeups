@@ -2,7 +2,7 @@
 
 #### Description
 * Platform Source Code: https://github.com/SniperOJ/Platform
-* Dockerfiles of Challenges: https://github.com/SniperOJ/Dockerfiles
+* Dockerfiles of Challenges: https://github.com/SniperOJ/Challenge-Dockerfiles
 
 
 #### Challenges
